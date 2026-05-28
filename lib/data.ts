@@ -1,5 +1,3 @@
-"use server"
-
 import type { Forest, Officer, DashboardData } from "@/lib/types"
 
 // This file contains mock data and functions for demonstration purposes

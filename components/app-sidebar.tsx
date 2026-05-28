@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 import {
   Sidebar,
@@ -40,6 +41,7 @@ import {
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -76,7 +78,7 @@ export function AppSidebar() {
 
   const handleSignOut = async () => {
     await signOut();
-    window.location.href = "/login";
+    router.push("/login");
   };
 
   const toggleTheme = () => {

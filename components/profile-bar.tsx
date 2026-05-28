@@ -28,14 +28,16 @@ import {
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { signOut } from "@/lib/auth";
 
 export function ProfileBar() {
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
 
   const handleSignOut = async () => {
     await signOut();
-    window.location.href = "/login";
+    router.push("/login");
   };
 
   return (
