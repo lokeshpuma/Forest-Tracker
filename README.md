@@ -1,4 +1,4 @@
-# ForestTracker-2
+# ForestTracker
 
 A forest and environmental monitoring application built with Next.js and React for tracking forests, wildlife, water bodies, resources, and officers.
 
@@ -44,7 +44,7 @@ This repo deploys automatically to GitHub Pages on every push to `main` via [`.g
 1. Open **Settings → Pages** for the repository.
 2. Set **Source** to **GitHub Actions**.
 
-**Live site:** [https://lokeshpuma.github.io/ForestTracker-2/](https://lokeshpuma.github.io/ForestTracker-2/)
+**Live site:** [https://lokeshpuma.github.io/ForestTracker-2/](https://lokeshpuma.github.io/Forest-Tracker/)
 
 Manual deploy (optional):
 
@@ -53,9 +53,9 @@ npm run deploy
 ```
 
 ## Configuration
-
 - `basePath` / `assetPrefix`: `/ForestTracker-2` (project site URL on GitHub Pages)
 - `output: "export"` in `next.config.mjs` for static HTML export
+- `images: { unoptimized: true }` in `next.config.mjs` to prevent build failures when using Next.js `<Image />` components with static exports
 
 ## License
 
